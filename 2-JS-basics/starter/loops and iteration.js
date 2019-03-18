@@ -34,3 +34,6 @@ for(var i = 0; i < 5; i++){
 for(var i = john.length - 1; i>=0; i--){
 	console.log(john[i])
 }
+
+
+
