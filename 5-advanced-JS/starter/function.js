@@ -58,3 +58,5 @@ teacherQ('john')
 
 //Another way to do it 
 interviewQuestion('teacher')('Mark')
+
+
