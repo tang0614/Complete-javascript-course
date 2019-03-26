@@ -23,14 +23,21 @@ Question.prototype.checkAnswer= function(ans) {
 	}
 }
 
-
 var q1 = new Question('Is javascript the coolest one?',['Yes','No'],0)
 var q2 = new Question('What\'s the name of this course teacher?',['john','Micheal','jonas'],2)
-
 var questions = [q1,q2]
-var n = Math.floor((Math.random() * questions.length))
+
+function nextQuestion() {
+	var n = Math.floor((Math.random() * questions.length))
 
 
-questions[n].displayQuestion()
-var answer = parseInt(prompt('choose one'))
-questions[n].checkAnswer(answer)
+	questions[n].displayQuestion()
+	var answer = prompt('choose one')
+	
+
+	if(answer !== 'correct'){
+		questions[n].checkAnswer(answer)
+		nextQuestion()
+	}
+}
+nextQuestion()
