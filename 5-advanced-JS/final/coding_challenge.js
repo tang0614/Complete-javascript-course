@@ -35,7 +35,7 @@ function nextQuestion() {
 	var answer = prompt('choose one')
 	
 
-	if(answer !== 'correct'){
+	if(answer !== 'exist'){
 		questions[n].checkAnswer(answer)
 		nextQuestion()
 	}
